@@ -1,0 +1,45 @@
+<div class="panel panel-default">
+
+  <search-bar></search-bar>
+
+  <!--<div class="table-responsive">-->
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Location</th>
+          <th>Break</th>
+          <th></th>
+          <th></th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor='let surfBreak of surfBreaks'>
+          <td>{{surfBreak.name}}</td>
+          <td>{{surfBreak.location}}</td>
+          <td>{{surfBreak.break}}</td>
+            <td>
+              <a class="btn btn-primary" [routerLink]="['/surf-break-details', surfBreak.id]">
+                More Details
+                <i class="glyphicon glyphicon-search" > </i>
+              </a>
+            </td>
+            <td>
+              <a class="btn btn-primary" [routerLink]="['/edit-surf-break', surfBreak.id]">
+                Edit
+                <i class="glyphicon glyphicon-edit" > </i>
+              </a>
+            </td>
+            <td>
+              <a class="btn btn-primary" [routerLink]="['/delete-surf-break', surfBreak.id]">
+                Delete
+                <i class="glyphicon glyphicon-trash"> </i>
+              </a>
+            </td>
+        </tr>
+      </tbody>
+    </table>
+</div>
+
+<a class="btn btn-primary" [routerLink]="['/edit-surf-break']"> Add New Spot...</a>

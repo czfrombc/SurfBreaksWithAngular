@@ -1,0 +1,20 @@
+<h2> {{surfBreak.name}} </h2>
+<div>
+  Id: {{surfBreak.id}}
+</div>
+<div>
+  Location: {{surfBreak.location}}
+</div>
+<div>
+  Bottom Type: {{surfBreak.break}}
+</div>
+
+<div *ngIf="isUpdated">
+  <div class="alert alert-info">
+    Surfbreak saved!
+  </div>
+</div>
+
+<br />
+
+<a [routerLink]="['/surf-breaks-list']"> All Surf Breaks</a>

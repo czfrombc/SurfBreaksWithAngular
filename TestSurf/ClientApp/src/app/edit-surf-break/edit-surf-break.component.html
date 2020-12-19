@@ -1,0 +1,26 @@
+<div class="container">
+  <h2> Editing {{surfBreak.name}} </h2>
+
+  <form #form="ngForm" (ngSubmit)="onSubmit(form)">
+    <input type="hidden" />
+    <div class="form-group">
+      <label for="spot"> Name: </label>
+      <input id="spot" name="name" class="form-control" [(ngModel)]="surfBreak.name" />
+    </div>
+    <div class="form-group">
+      <label for="location">Location</label>
+      <input id="location" name="location" class="form-control" [(ngModel)]="surfBreak.location" />
+    </div>
+    <div class="form-group">
+      <label for="break">Break </label>
+      <select id="break" name="break" class="form-control" [(ngModel)]="surfBreak.break">
+        <option> None </option>
+        <option> Beach </option>
+        <option> Point </option>
+        <option> Reef </option>
+      </select>
+    </div>
+    <button type="submit" class="btn btn-primary">Save</button> 
+  </form>
+</div>
+
