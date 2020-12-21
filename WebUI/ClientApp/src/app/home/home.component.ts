@@ -10,13 +10,11 @@ import { SurfBreaksService } from '../surf-breaks/surf-breaks.service';
 export class HomeComponent {
 
   surfBreaks: ISurfBreak[];
-
+  
   constructor(private surfBreakService: SurfBreaksService) {
   }
 
-  //ngOnInit(): void {
-  //  {
-  //    this.surfBreaks = this.surfBreakService.getSurfBreaks();
-  //  }
-  //}
+  ngOnInit(): void {
+    this.surfBreakService.getSurfBreaksCount();
+  }
 }

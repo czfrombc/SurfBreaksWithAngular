@@ -41,6 +41,10 @@ export class SurfBreaksService {
       }));
   }
 
+  getSurfBreaksCount(): number {
+    return this.surfBreaks.length;
+  }
+
   createSurfBreak(surfBreak: ISurfBreak): Observable<any> {
     this.sbto = this.getSurfBreakTransferObject(surfBreak);
     return this.http.post(this.surfBreaksUrl + "/" + this.sbto.id, this.sbto);
