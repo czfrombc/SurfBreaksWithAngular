@@ -7,8 +7,6 @@ import { RouterModule } from '@angular/router';
 import { AppComponent } from './app.component';
 import { NavMenuComponent } from './nav-menu/nav-menu.component';
 import { HomeComponent } from './home/home.component';
-import { CounterComponent } from './counter/counter.component';
-import { FetchDataComponent } from './fetch-data/fetch-data.component';
 import { SurfBreaksListComponent } from './surf-breaks-list/surf-breaks-list.component';
 import { SearchBarComponent } from './search-bar/search-bar.component';
 import { EditSurfBreakComponent } from './edit-surf-break/edit-surf-break.component';
@@ -21,8 +19,6 @@ import { DeleteSurfBreakComponent } from './delete-surf-break/delete-surf-break.
     AppComponent,
     NavMenuComponent,
     HomeComponent,
-    CounterComponent,
-    FetchDataComponent,
     SurfBreaksListComponent,
     SearchBarComponent,
     EditSurfBreakComponent,
@@ -35,8 +31,6 @@ import { DeleteSurfBreakComponent } from './delete-surf-break/delete-surf-break.
     FormsModule,
     RouterModule.forRoot([
       { path: '', component: HomeComponent, pathMatch: 'full' },
-      { path: 'counter', component: CounterComponent },
-      { path: 'fetch-data', component: FetchDataComponent },
       { path: 'surf-breaks-list', component: SurfBreaksListComponent },
       { path: 'edit-surf-break', component: EditSurfBreakComponent },
       { path: 'edit-surf-break/:id', component: EditSurfBreakComponent },
