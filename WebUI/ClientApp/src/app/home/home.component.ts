@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+ import { Component } from '@angular/core';
 import { ISurfBreak } from '../surf-breaks/surf-break';
 import { SurfBreaksService } from '../surf-breaks/surf-breaks.service';
 
@@ -10,11 +10,17 @@ import { SurfBreaksService } from '../surf-breaks/surf-breaks.service';
 export class HomeComponent {
 
   surfBreaks: ISurfBreak[];
+  totalCount: number;
   
   constructor(private surfBreakService: SurfBreaksService) {
   }
 
   ngOnInit(): void {
-    this.surfBreakService.getSurfBreaksCount();
+    this.surfBreakService.getSurfBreaks().subscribe(success => {
+      if (success) {
+        this.surfBreaks = this.surfBreakService.surfBreaks;
+        this.totalCount = this.surfBreaks.length;
+      }
+    });
   }
 }

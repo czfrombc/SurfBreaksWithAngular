@@ -32,6 +32,7 @@ import { DeleteSurfBreakComponent } from './delete-surf-break/delete-surf-break.
     RouterModule.forRoot([
       { path: '', component: HomeComponent, pathMatch: 'full' },
       { path: 'surf-breaks-list', component: SurfBreaksListComponent },
+      { path: 'surf-breaks-list/:searchTerm', component: SurfBreaksListComponent },
       { path: 'edit-surf-break', component: EditSurfBreakComponent },
       { path: 'edit-surf-break/:id', component: EditSurfBreakComponent },
       { path: 'surf-break-details', component: SurfBreakDetailsComponent },

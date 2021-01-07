@@ -41,6 +41,11 @@ export class SurfBreaksService {
       }));
   }
 
+  getSurfBreaksByName(searchTerm: string): ISurfBreak[] {
+    var filtered = this.surfBreaks.filter(surfBreak => surfBreak.name.startsWith(searchTerm.substring(0,1).toUpperCase() + searchTerm.substring(1)));
+    return filtered;
+  }
+
   getSurfBreaksCount(): number {
     return this.surfBreaks.length;
   }
