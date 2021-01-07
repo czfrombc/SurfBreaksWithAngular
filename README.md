@@ -1,0 +1,3 @@
+# SurfBreaksWithAngular
+
+This project follows the principles of Clean Architecture (Jason Taylor) and is a Single Page App (SPA) using ASP.NET Core 3.1 and Angular 10.  It is a continuation of an earlier project - https://github.com/czfrombc/SurfSpots - and has been modified to implement the CQRS and Mediator design patterns.  This allows the project to be easily extendable and separates design concerns (for example if the UI framework needs to be changed to another technology such as React or Blazor this could all be done in the WebUI layer!)  The purpose of this site is to limit dependencies between the Core, Persistence and UI layers and to allow the user to create, retrieve, edit or delete a surf spot and to also connect to a surf forecast for that spot.  
